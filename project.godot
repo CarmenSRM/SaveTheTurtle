@@ -1,0 +1,31 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Ssc-game"
+run/main_scene="res://release.tscn"
+config/features=PackedStringArray("4.1", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1400
+window/size/viewport_height=700
+
+[layer_names]
+
+2d_physics/layer_1="Maps"
+2d_physics/layer_2="Enemies"
+2d_physics/layer_3="Fred"
+2d_physics/layer_4="Portal"
+2d_physics/layer_5="leaf"
+2d_physics/layer_6="Food"
+2d_physics/layer_7="Seagull"

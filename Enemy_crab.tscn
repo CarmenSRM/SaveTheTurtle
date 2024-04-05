@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://dthioeboy8oni"]
+
+[ext_resource type="Script" path="res://Enemy_crab.gd" id="1_42h43"]
+[ext_resource type="Texture2D" uid="uid://cq8lb5byqk8tm" path="res://Recursos/Enemigos/crab.png" id="1_vf55q"]
+[ext_resource type="Texture2D" uid="uid://b0reymme8usta" path="res://Recursos/Enemigos/crab2.png" id="2_pp1pd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdbiy"]
+atlas = ExtResource("2_pp1pd")
+region = Rect2(0, 0, 571, 325)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtiou"]
+atlas = ExtResource("1_vf55q")
+region = Rect2(0, 0, 571, 322)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4gq6b"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_mdbiy")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_gtiou")
+}],
+"loop": true,
+"name": &"dance",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pj3xh"]
+radius = 13.0115
+height = 68.0198
+
+[node name="Crab" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_42h43")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.00002, -2)
+scale = Vector2(0.219957, 0.219957)
+sprite_frames = SubResource("SpriteFrames_4gq6b")
+animation = &"dance"
+frame_progress = 0.304134
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -22)
+rotation = -1.55824
+shape = SubResource("CapsuleShape2D_pj3xh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

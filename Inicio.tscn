@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdfud4lvscsi5"]
+
+[ext_resource type="Texture2D" uid="uid://bjjai44ldmybt" path="res://Recursos/Fondos/inicio.png" id="1_i115d"]
+[ext_resource type="Texture2D" uid="uid://cm0vqkr4svkux" path="res://Recursos/Letras/logo.png" id="2_2wupo"]
+[ext_resource type="Theme" uid="uid://coood86movgp4" path="res://Recursos/Letras/BtnsColor.tres" id="3_u7ras"]
+[ext_resource type="Script" path="res://FirstButtons.gd" id="3_upxwf"]
+[ext_resource type="PackedScene" uid="uid://hugwq757olf5" path="res://Intructions_N1.tscn" id="4_g6542"]
+[ext_resource type="FontFile" uid="uid://dr8yvckycxwa3" path="res://Recursos/Letras/Born2bSportyV2.ttf" id="4_khgws"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -18.0
+offset_top = -17.0
+offset_right = 1403.0
+offset_bottom = 712.0
+texture = ExtResource("1_i115d")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 119.0
+offset_top = 17.0
+offset_right = 746.0
+offset_bottom = 529.0
+texture = ExtResource("2_2wupo")
+
+[node name="Botones" type="VBoxContainer" parent="."]
+offset_left = 1047.0
+offset_top = 271.0
+offset_right = 1283.0
+offset_bottom = 438.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 21
+script = ExtResource("3_upxwf")
+Next = ExtResource("4_g6542")
+
+[node name="Start" type="Button" parent="Botones"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_u7ras")
+theme_override_fonts/font = ExtResource("4_khgws")
+theme_override_font_sizes/font_size = 40
+text = "Start"
+
+[node name="Info" type="Button" parent="Botones"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("3_u7ras")
+theme_override_fonts/font = ExtResource("4_khgws")
+theme_override_font_sizes/font_size = 40
+text = "Opciones"
+
+[connection signal="pressed" from="Botones/Start" to="Botones" method="_on_start_pressed"]
+[connection signal="pressed" from="Botones/Info" to="Botones" method="_on_info_pressed"]

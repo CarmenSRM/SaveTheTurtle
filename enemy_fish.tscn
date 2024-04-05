@@ -1,0 +1,112 @@
+[gd_scene load_steps=8 format=3 uid="uid://b351nmqt5v5ej"]
+
+[ext_resource type="Script" path="res://enemy_fish.gd" id="1_3cte7"]
+[ext_resource type="Texture2D" uid="uid://dmfn4oeyg5qvn" path="res://Recursos/Personajes/Mandarino.png" id="1_b22xa"]
+[ext_resource type="Texture2D" uid="uid://cc2rowxyxkoty" path="res://Recursos/Personajes/MandarinoT.png" id="2_y3vk6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brbg6"]
+atlas = ExtResource("1_b22xa")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k15h0"]
+atlas = ExtResource("2_y3vk6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d8hu0"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_brbg6")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_k15h0")
+}],
+"loop": true,
+"name": &"swiming",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oyi76"]
+radius = 43.0091
+height = 143.964
+
+[node name="EnemyFish" type="Area2D"]
+position = Vector2(0, 1)
+script = ExtResource("1_3cte7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-20, 8)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_d8hu0")
+animation = &"swiming"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(33, -32)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_d8hu0")
+animation = &"swiming"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(48, -14)
+scale = Vector2(0.664063, 0.664063)
+sprite_frames = SubResource("SpriteFrames_d8hu0")
+animation = &"swiming"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+position = Vector2(-11, -8)
+scale = Vector2(0.828125, 0.828125)
+sprite_frames = SubResource("SpriteFrames_d8hu0")
+animation = &"swiming"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
+position = Vector2(11, 8.00001)
+scale = Vector2(0.933594, 0.933594)
+sprite_frames = SubResource("SpriteFrames_d8hu0")
+animation = &"swiming"
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="."]
+position = Vector2(10, -18)
+scale = Vector2(0.703125, 0.703125)
+sprite_frames = SubResource("SpriteFrames_d8hu0")
+animation = &"swiming"
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, 27)
+scale = Vector2(0.65625, 0.65625)
+sprite_frames = SubResource("SpriteFrames_d8hu0")
+animation = &"swiming"
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="."]
+position = Vector2(53, 3)
+scale = Vector2(0.632812, 0.632812)
+sprite_frames = SubResource("SpriteFrames_d8hu0")
+animation = &"swiming"
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="."]
+position = Vector2(21, -5)
+scale = Vector2(0.640625, 0.640625)
+sprite_frames = SubResource("SpriteFrames_d8hu0")
+animation = &"swiming"
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="."]
+position = Vector2(74, 14)
+scale = Vector2(0.734375, 0.734375)
+sprite_frames = SubResource("SpriteFrames_d8hu0")
+animation = &"swiming"
+
+[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="."]
+position = Vector2(73, -11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_d8hu0")
+animation = &"swiming"
+
+[node name="AnimatedSprite2D12" type="AnimatedSprite2D" parent="."]
+position = Vector2(34, 23)
+scale = Vector2(0.84375, 0.84375)
+sprite_frames = SubResource("SpriteFrames_d8hu0")
+animation = &"swiming"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(28, -2)
+rotation = -1.58315
+shape = SubResource("CapsuleShape2D_oyi76")

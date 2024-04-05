@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://nr8g461t6joy"]
+
+[ext_resource type="Texture2D" uid="uid://bovsq0o2ukitw" path="res://Recursos/Extras/JellyFish.png" id="1_ctdt1"]
+[ext_resource type="Script" path="res://jelly_fish.gd" id="1_kcygt"]
+[ext_resource type="Texture2D" uid="uid://c0pixu5v26f78" path="res://Recursos/Extras/JellyFish2.png" id="2_i1ohw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ce036"]
+atlas = ExtResource("1_ctdt1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6iehf"]
+atlas = ExtResource("2_i1ohw")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0obrs"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_ce036")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_6iehf")
+}],
+"loop": true,
+"name": &"JellySwiming",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_066b3"]
+radius = 8.86483
+height = 33.8053
+
+[node name="JellyFish" type="Area2D"]
+script = ExtResource("1_kcygt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2, -1)
+scale = Vector2(0.414063, 0.414063)
+sprite_frames = SubResource("SpriteFrames_0obrs")
+animation = &"JellySwiming"
+frame_progress = 0.336869
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -1)
+rotation = -0.597027
+shape = SubResource("CapsuleShape2D_066b3")

@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://k6p6xk45ktsa"]
+
+[ext_resource type="Script" path="res://fred_swimer.gd" id="1_7en22"]
+[ext_resource type="Texture2D" uid="uid://cnkr41i5bpdua" path="res://Recursos/Personajes/FredsSide.png" id="1_varaq"]
+[ext_resource type="Texture2D" uid="uid://bgu05e361t1ds" path="res://Recursos/Personajes/FredsSide2.png" id="2_kepsn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xc5e"]
+atlas = ExtResource("1_varaq")
+region = Rect2(0, 204, 134, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qja5j"]
+atlas = ExtResource("2_kepsn")
+region = Rect2(268, 102, 134, 102)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0q6vi"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_1xc5e")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_qja5j")
+}],
+"loop": true,
+"name": &"swim",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ek3bo"]
+height = 38.0
+
+[node name="swimer_fred" type="CharacterBody2D"]
+position = Vector2(8, -4)
+script = ExtResource("1_7en22")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(250.647, 101)
+scale = Vector2(0.352941, 0.352941)
+sprite_frames = SubResource("SpriteFrames_0q6vi")
+animation = &"swim"
+frame_progress = 0.981659
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(253, 95)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ek3bo")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-45, 25)
+anchor_mode = 0
+limit_left = 0
+limit_bottom = 700

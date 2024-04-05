@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ed6r8jcylqgx"]
+
+[ext_resource type="Script" path="res://first_meta.gd" id="1_of2w2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_413my"]
+radius = 280.915
+height = 710.149
+
+[node name="Meta" type="Area2D"]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_of2w2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.56507
+shape = SubResource("CapsuleShape2D_413my")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

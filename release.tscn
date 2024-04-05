@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=3 uid="uid://njew7k3160gk"]
+
+[ext_resource type="PackedScene" uid="uid://d3qb2v616w7mx" path="res://beachsand_map.tscn" id="1_rm6qe"]
+[ext_resource type="PackedScene" uid="uid://bawx8jfcd4dcn" path="res://beachend_map.tscn" id="2_koalk"]
+[ext_resource type="PackedScene" uid="uid://ce1g0qk8clt4q" path="res://EnemyGaviota.tscn" id="2_qcak3"]
+[ext_resource type="PackedScene" uid="uid://bn7dsk2jdhbhq" path="res://baby_fred.tscn" id="3_c6ppy"]
+[ext_resource type="PackedScene" uid="uid://dthioeboy8oni" path="res://Enemy_crab.tscn" id="6_d0ajw"]
+[ext_resource type="PackedScene" uid="uid://dxr8f1jdety0p" path="res://parallaxcost.tscn" id="6_pgbhf"]
+[ext_resource type="PackedScene" uid="uid://ed6r8jcylqgx" path="res://first_meta.tscn" id="7_hgsp8"]
+[ext_resource type="PackedScene" uid="uid://yrbru0ccg3va" path="res://algae.tscn" id="8_jiwkt"]
+[ext_resource type="PackedScene" uid="uid://cup6bfqantww7" path="res://leaf.tscn" id="9_b7tw0"]
+
+[node name="release" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("6_pgbhf")]
+
+[node name="TileMap" parent="." instance=ExtResource("1_rm6qe")]
+
+[node name="TileMap2" parent="." instance=ExtResource("1_rm6qe")]
+position = Vector2(25294, 0)
+
+[node name="TileMap3" parent="." instance=ExtResource("1_rm6qe")]
+position = Vector2(50590, 0)
+
+[node name="End" parent="." instance=ExtResource("2_koalk")]
+position = Vector2(-98, 2)
+
+[node name="Meta" parent="." instance=ExtResource("7_hgsp8")]
+position = Vector2(77050, 739)
+
+[node name="Enemy" parent="." instance=ExtResource("2_qcak3")]
+position = Vector2(305, 212)
+
+[node name="crab" parent="." instance=ExtResource("6_d0ajw")]
+position = Vector2(22748, 661)
+
+[node name="crab2" parent="." instance=ExtResource("6_d0ajw")]
+position = Vector2(37649, 658)
+
+[node name="crab3" parent="." instance=ExtResource("6_d0ajw")]
+position = Vector2(12233, 658)
+
+[node name="crab4" parent="." instance=ExtResource("6_d0ajw")]
+position = Vector2(24317, 658)
+
+[node name="crab5" parent="." instance=ExtResource("6_d0ajw")]
+position = Vector2(27520, 649)
+
+[node name="crab6" parent="." instance=ExtResource("6_d0ajw")]
+position = Vector2(49240, 663)
+
+[node name="crab7" parent="." instance=ExtResource("6_d0ajw")]
+position = Vector2(51461, 662)
+
+[node name="crab8" parent="." instance=ExtResource("6_d0ajw")]
+position = Vector2(65787, 656)
+
+[node name="crab9" parent="." instance=ExtResource("6_d0ajw")]
+position = Vector2(73984, 658)
+
+[node name="BabyFred" parent="." instance=ExtResource("3_c6ppy")]
+position = Vector2(604, 614)
+
+[node name="algae" parent="." instance=ExtResource("8_jiwkt")]
+position = Vector2(2955, 624)
+
+[node name="algae2" parent="." instance=ExtResource("8_jiwkt")]
+position = Vector2(7672, 625)
+
+[node name="algae3" parent="." instance=ExtResource("8_jiwkt")]
+position = Vector2(12516, 624)
+
+[node name="algae4" parent="." instance=ExtResource("8_jiwkt")]
+position = Vector2(41300, 625)
+
+[node name="algae5" parent="." instance=ExtResource("8_jiwkt")]
+position = Vector2(34737, 560)
+
+[node name="algae6" parent="." instance=ExtResource("8_jiwkt")]
+position = Vector2(72248, 622)
+
+[node name="algae7" parent="." instance=ExtResource("8_jiwkt")]
+position = Vector2(68631, 569)
+
+[node name="algae8" parent="." instance=ExtResource("8_jiwkt")]
+position = Vector2(57863, 566)
+
+[node name="algae9" parent="." instance=ExtResource("8_jiwkt")]
+position = Vector2(49817, 594)
+
+[node name="algae10" parent="." instance=ExtResource("8_jiwkt")]
+position = Vector2(25771, 567)
+
+[node name="leaf" parent="." instance=ExtResource("9_b7tw0")]
+position = Vector2(1038, 613)
+
+[node name="leaf2" parent="." instance=ExtResource("9_b7tw0")]
+position = Vector2(14090, 604)
+
+[node name="leaf3" parent="." instance=ExtResource("9_b7tw0")]
+position = Vector2(24714, 625)
+
+[node name="leaf4" parent="." instance=ExtResource("9_b7tw0")]
+position = Vector2(35337, 616)
+
+[node name="leaf5" parent="." instance=ExtResource("9_b7tw0")]
+position = Vector2(45885, 640)
+
+[node name="leaf6" parent="." instance=ExtResource("9_b7tw0")]
+position = Vector2(56245, 608)
+
+[node name="leaf7" parent="." instance=ExtResource("9_b7tw0")]
+position = Vector2(67061, 608)
