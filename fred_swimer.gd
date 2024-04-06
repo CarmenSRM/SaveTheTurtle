@@ -1,8 +1,10 @@
 extends CharacterBody2D
 #Creacion de las variables y asignación de valores. 
-const speed = 500
+var speed = 500
 var current_dir = "none"
-var fredPos  #Posiblemente se puede eliminar (Revisar)
+#var fredPos  #Posiblemente se puede eliminar (Revisar)
+
+@export var Dead = preload("res://Portada.tscn") as PackedScene #Creación de la escena
 
 func _ready(): #Lo hice así para que  la animación de inicio quede en la dirección correcta. 
 	var an = $AnimatedSprite2D
@@ -13,7 +15,7 @@ func _ready(): #Lo hice así para que  la animación de inicio quede en la direc
 func _physics_process(delta): 
 	velocity.x = speed
 	velocity.y = 0
-	fredPos = global_transform.origin #asiganación y actualizacion de la posición. (para poder jugar con la direccion y persecución)
+	#fredPos = global_transform.origin #asiganación y actualizacion de la posición. (para poder jugar con la direccion y persecución)
 	move_and_slide()
 	personaje_movement(delta) #Llamada ala función de los movimientos. 
 
@@ -77,3 +79,25 @@ func play_anim(movement):
 		elif movement == 0: 
 			#anim.flip_v = false
 			anim.play("swim")
+
+func _on_enemies_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	print(":(")
+	print(speed)
+	if speed >= 100:
+		speed -=  100 #Agregar un timer y avomodar la herida 
+		velocity.y = 200
+		velocity.x = 0
+		#$AnimatedSprite2D.play("hurt")
+	else: 
+		#$AnimatedSprite2D.play("hurt")
+		get_tree().change_scene_to_packed(Dead) #Cambio de escena. 
+	velocity.x = speed
+	#$AnimatedSprite2D.play("walk")
+	print(speed)
+
+
+func _on_foods_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	print(":)")
+	print(speed)
+	speed +=  100
+	print(speed)

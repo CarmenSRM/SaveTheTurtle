@@ -1,10 +1,10 @@
 extends VBoxContainer
 
-@export var Next = PackedScene
-
+@export var Next = preload("res://NivelUno.tscn") as PackedScene
+# Creación de variables para las escenas
+# Se guardan las escenas a las cuales harán referencia. 
 func _ready():
 	pass 
-
 func _process(delta):
 	pass
 
@@ -17,4 +17,4 @@ func _on_next_pressed():
 	$Label2.visibility = false
 
 func _on_start_pressed():
-	get_tree().change_scene_to_packed(Next) 
+	get_tree().change_scene_to_packed(Next) # Hace el cambio de escena en base al valor almacenado en la variable

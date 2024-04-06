@@ -92,19 +92,21 @@ radius = 12.0135
 height = 39.9366
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h1mm8"]
+radius = 12.1752
+height = 39.7671
 
 [node name="BabyFred" type="CharacterBody2D" groups=["Enemy", "presa"]]
 collision_layer = 4
-collision_mask = 73
+collision_mask = 89
 script = ExtResource("1_bgwva")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(86, -7)
+position = Vector2(-0.999992, 0)
 rotation = 1.57057
 shape = SubResource("CapsuleShape2D_pvl2q")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(85, -1)
+position = Vector2(-3, 4)
 scale = Vector2(0.352612, 0.360294)
 sprite_frames = SubResource("SpriteFrames_hb3d0")
 animation = &"hurt"
@@ -113,26 +115,29 @@ frame_progress = 0.242609
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(112, -263)
 limit_left = 0
+limit_top = 0
 limit_right = 77424
 limit_bottom = 1000
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Enemies" type="Area2D" parent="."]
 collision_layer = 4
-collision_mask = 10
+collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(86, -2)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies"]
+position = Vector2(-1.99999, 0)
 rotation = -1.58556
 shape = SubResource("CapsuleShape2D_1k3n5")
 
-[node name="Area2D2" type="Area2D" parent="."]
+[node name="Foods" type="Area2D" parent="."]
 collision_layer = 4
 collision_mask = 32
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foods"]
+position = Vector2(-1, 0)
+rotation = -1.61793
 shape = SubResource("CapsuleShape2D_h1mm8")
 
 [node name="Timer" type="Timer" parent="."]
 
-[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
-[connection signal="area_shape_entered" from="Area2D2" to="." method="_on_area_2d_2_area_shape_entered"]
+[connection signal="area_shape_entered" from="Enemies" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="area_shape_entered" from="Foods" to="." method="_on_area_2d_2_area_shape_entered"]

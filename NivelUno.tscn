@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://njew7k3160gk"]
+[gd_scene load_steps=11 format=3 uid="uid://b102tfavi1vb8"]
 
 [ext_resource type="PackedScene" uid="uid://d3qb2v616w7mx" path="res://beachsand_map.tscn" id="1_rm6qe"]
 [ext_resource type="PackedScene" uid="uid://bawx8jfcd4dcn" path="res://beachend_map.tscn" id="2_koalk"]
@@ -9,27 +9,26 @@
 [ext_resource type="PackedScene" uid="uid://ed6r8jcylqgx" path="res://first_meta.tscn" id="7_hgsp8"]
 [ext_resource type="PackedScene" uid="uid://yrbru0ccg3va" path="res://algae.tscn" id="8_jiwkt"]
 [ext_resource type="PackedScene" uid="uid://cup6bfqantww7" path="res://leaf.tscn" id="9_b7tw0"]
+[ext_resource type="PackedScene" uid="uid://b087xisgemdk4" path="res://limit.tscn" id="10_q4por"]
 
-[node name="release" type="Node2D"]
+[node name="NivelUno" type="Node2D"]
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("6_pgbhf")]
 
-[node name="TileMap" parent="." instance=ExtResource("1_rm6qe")]
+[node name="sand" parent="." instance=ExtResource("1_rm6qe")]
+position = Vector2(-19, 0)
 
-[node name="TileMap2" parent="." instance=ExtResource("1_rm6qe")]
-position = Vector2(25294, 0)
+[node name="sand2" parent="." instance=ExtResource("1_rm6qe")]
+position = Vector2(25277, 0)
 
-[node name="TileMap3" parent="." instance=ExtResource("1_rm6qe")]
-position = Vector2(50590, 0)
+[node name="sand3" parent="." instance=ExtResource("1_rm6qe")]
+position = Vector2(50573, 0)
 
 [node name="End" parent="." instance=ExtResource("2_koalk")]
-position = Vector2(-98, 2)
+position = Vector2(-115, 1)
 
 [node name="Meta" parent="." instance=ExtResource("7_hgsp8")]
 position = Vector2(77050, 739)
-
-[node name="Enemy" parent="." instance=ExtResource("2_qcak3")]
-position = Vector2(305, 212)
 
 [node name="crab" parent="." instance=ExtResource("6_d0ajw")]
 position = Vector2(22748, 661)
@@ -59,10 +58,10 @@ position = Vector2(65787, 656)
 position = Vector2(73984, 658)
 
 [node name="BabyFred" parent="." instance=ExtResource("3_c6ppy")]
-position = Vector2(604, 614)
+position = Vector2(27, 618)
 
 [node name="algae" parent="." instance=ExtResource("8_jiwkt")]
-position = Vector2(2955, 624)
+position = Vector2(2415, 635)
 
 [node name="algae2" parent="." instance=ExtResource("8_jiwkt")]
 position = Vector2(7672, 625)
@@ -92,7 +91,7 @@ position = Vector2(49817, 594)
 position = Vector2(25771, 567)
 
 [node name="leaf" parent="." instance=ExtResource("9_b7tw0")]
-position = Vector2(1038, 613)
+position = Vector2(3729, 599)
 
 [node name="leaf2" parent="." instance=ExtResource("9_b7tw0")]
 position = Vector2(14090, 604)
@@ -111,3 +110,9 @@ position = Vector2(56245, 608)
 
 [node name="leaf7" parent="." instance=ExtResource("9_b7tw0")]
 position = Vector2(67061, 608)
+
+[node name="Enemy" parent="." instance=ExtResource("2_qcak3")]
+position = Vector2(-3020, -549)
+
+[node name="limit" parent="." instance=ExtResource("10_q4por")]
+position = Vector2(40541, -225)

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var Dead = preload("res://Inicio.tscn") as PackedScene #Creación de la escena
+@export var Dead = preload("res://Portada.tscn") as PackedScene #Creación de la escena
 
 #Creacion de las variables y asignación de valores. 
 var speed = 300
@@ -84,9 +84,9 @@ func play_anim(movement):
 func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	print(":(")
 	print(speed)
-	if speed >= 0:
+	if speed >= 100:
 		speed -=  100 #Agregar un timer y avomodar la herida 
-		velocity.y += 200
+		velocity.y = 200
 		velocity.x = 0
 		#$AnimatedSprite2D.play("hurt")
 	else: 
@@ -94,9 +94,10 @@ func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shap
 		get_tree().change_scene_to_packed(Dead) #Cambio de escena. 
 	velocity.x = speed
 	$AnimatedSprite2D.play("walk")
-
+	print(speed)
 
 func _on_area_2d_2_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
 	print(":)")
 	print(speed)
 	speed +=  100
+	print(speed)

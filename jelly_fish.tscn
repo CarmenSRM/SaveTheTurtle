@@ -31,6 +31,8 @@ radius = 8.86483
 height = 33.8053
 
 [node name="JellyFish" type="Area2D"]
+collision_layer = 32
+collision_mask = 4
 script = ExtResource("1_kcygt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -44,3 +46,5 @@ frame_progress = 0.336869
 position = Vector2(1, -1)
 rotation = -0.597027
 shape = SubResource("CapsuleShape2D_066b3")
+
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]

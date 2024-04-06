@@ -1,15 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://cup6bfqantww7"]
+[gd_scene load_steps=5 format=3 uid="uid://cup6bfqantww7"]
 
 [ext_resource type="Texture2D" uid="uid://bjgak8mtrk867" path="res://Recursos/Fondos/leaf.png" id="1_l75un"]
+[ext_resource type="Script" path="res://leafRefugio.gd" id="1_lidjk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pttjw"]
-radius = 76.7919
-height = 186.671
+radius = 35.2133
+height = 110.589
 
-[node name="Area2D" type="Area2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8hvjd"]
+radius = 39.4551
+height = 143.019
+
+[node name="leaf" type="Area2D"]
 rotation = 0.162865
 collision_layer = 16
-collision_mask = 64
+collision_mask = 4
+script = ExtResource("1_lidjk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(10, 21)
@@ -17,7 +23,17 @@ rotation = 0.280234
 scale = Vector2(0.256844, 0.256844)
 texture = ExtResource("1_l75un")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8.52883, -8.73265)
+[node name="leaf" type="CollisionShape2D" parent="."]
+position = Vector2(12.9345, 23.2099)
 rotation = -1.87618
 shape = SubResource("CapsuleShape2D_pttjw")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 64
+
+[node name="area" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5.08209, 6.25878)
+rotation = -1.90016
+scale = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_8hvjd")

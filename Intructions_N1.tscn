@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://hugwq757olf5"]
+[gd_scene load_steps=38 format=3 uid="uid://hugwq757olf5"]
 
 [ext_resource type="Texture2D" uid="uid://b5j26td05468y" path="res://Recursos/Mensajes y Controles/hoja.png" id="1_j75yu"]
 [ext_resource type="FontFile" uid="uid://dr8yvckycxwa3" path="res://Recursos/Letras/Born2bSportyV2.ttf" id="2_genl7"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://lf2rpimark1n" path="res://Recursos/Extras/fishTile_050.png" id="13_in05v"]
 [ext_resource type="Theme" uid="uid://coood86movgp4" path="res://Recursos/Letras/BtnsColor.tres" id="14_v3khk"]
 [ext_resource type="Script" path="res://InstructionBtns.gd" id="14_vgwdi"]
-[ext_resource type="PackedScene" uid="uid://njew7k3160gk" path="res://release.tscn" id="15_ivr5d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d5cqp"]
 atlas = ExtResource("3_apn5n")
@@ -333,7 +332,6 @@ offset_top = 443.0
 offset_right = 1362.0
 offset_bottom = 540.0
 script = ExtResource("14_vgwdi")
-Next = ExtResource("15_ivr5d")
 
 [node name="Next" type="Button" parent="Botones"]
 layout_mode = 2

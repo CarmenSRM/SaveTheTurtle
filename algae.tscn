@@ -43,3 +43,5 @@ animation = &"100points"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 4)
 shape = SubResource("CapsuleShape2D_sa1c5")
+
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]

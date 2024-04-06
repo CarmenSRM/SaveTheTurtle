@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Ssc-game"
-run/main_scene="res://release.tscn"
+run/main_scene="res://Inicio.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -29,3 +29,4 @@ window/size/viewport_height=700
 2d_physics/layer_5="leaf"
 2d_physics/layer_6="Food"
 2d_physics/layer_7="Seagull"
+2d_physics/layer_8="limit"

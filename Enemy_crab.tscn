@@ -46,5 +46,3 @@ frame_progress = 0.304134
 position = Vector2(2, -22)
 rotation = -1.55824
 shape = SubResource("CapsuleShape2D_pj3xh")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

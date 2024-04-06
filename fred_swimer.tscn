@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://k6p6xk45ktsa"]
+[gd_scene load_steps=10 format=3 uid="uid://k6p6xk45ktsa"]
 
 [ext_resource type="Script" path="res://fred_swimer.gd" id="1_7en22"]
 [ext_resource type="Texture2D" uid="uid://cnkr41i5bpdua" path="res://Recursos/Personajes/FredsSide.png" id="1_varaq"]
@@ -29,19 +29,28 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ek3bo"]
 height = 38.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_16gst"]
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y5872"]
+radius = 12.9979
+height = 41.9999
+
 [node name="swimer_fred" type="CharacterBody2D"]
-position = Vector2(8, -4)
+position = Vector2(11, 1)
+collision_layer = 4
+collision_mask = 9
 script = ExtResource("1_7en22")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(250.647, 101)
+position = Vector2(0, 2)
 scale = Vector2(0.352941, 0.352941)
 sprite_frames = SubResource("SpriteFrames_0q6vi")
 animation = &"swim"
 frame_progress = 0.981659
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(253, 95)
+position = Vector2(0, -4)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_ek3bo")
 
@@ -50,3 +59,23 @@ position = Vector2(-45, 25)
 anchor_mode = 0
 limit_left = 0
 limit_bottom = 700
+
+[node name="foods" type="Area2D" parent="."]
+position = Vector2(9, -3)
+collision_layer = 4
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="foods"]
+shape = SubResource("CapsuleShape2D_16gst")
+
+[node name="enemies" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies"]
+position = Vector2(0, -1.90735e-06)
+rotation = -1.57282
+shape = SubResource("CapsuleShape2D_y5872")
+
+[connection signal="area_shape_entered" from="foods" to="." method="_on_foods_area_shape_entered"]
+[connection signal="area_shape_entered" from="enemies" to="." method="_on_enemies_area_shape_entered"]

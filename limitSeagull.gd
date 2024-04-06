@@ -1,8 +1,9 @@
 extends Area2D
 
+var limit
+
 func _ready():
-	$AnimatedSprite2D.play("dance")
+	pass 
 
 func _process(delta):
-	pass
-
+	limit = global_transform.origin 
