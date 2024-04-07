@@ -1,6 +1,5 @@
-[gd_scene load_steps=38 format=3 uid="uid://hugwq757olf5"]
+[gd_scene load_steps=37 format=3 uid="uid://hugwq757olf5"]
 
-[ext_resource type="Texture2D" uid="uid://b5j26td05468y" path="res://Recursos/Mensajes y Controles/hoja.png" id="1_j75yu"]
 [ext_resource type="FontFile" uid="uid://dr8yvckycxwa3" path="res://Recursos/Letras/Born2bSportyV2.ttf" id="2_genl7"]
 [ext_resource type="Texture2D" uid="uid://c03ob73mndsvt" path="res://Recursos/Mensajes y Controles/arrowDown.png" id="3_apn5n"]
 [ext_resource type="Texture2D" uid="uid://cnkr41i5bpdua" path="res://Recursos/Personajes/FredsSide.png" id="4_ddxcu"]
@@ -221,13 +220,6 @@ offset_bottom = 723.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(1, 0.894118, 0.709804, 1)
-
-[node name="notebook" type="TextureRect" parent="."]
-offset_left = 19.0
-offset_top = 22.0
-offset_right = 1048.0
-offset_bottom = 655.0
-texture = ExtResource("1_j75yu")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 171.0
