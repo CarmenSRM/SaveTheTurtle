@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://c0ygc8nc2p1jd"]
+[gd_scene load_steps=89 format=3 uid="uid://c0ygc8nc2p1jd"]
 
 [ext_resource type="Script" path="res://Dialogos_Intro_1_2.gd" id="1_t8s5t"]
 [ext_resource type="FontFile" uid="uid://dr8yvckycxwa3" path="res://Recursos/Letras/Born2bSportyV2.ttf" id="2_csbyd"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://cq8lb5byqk8tm" path="res://Recursos/Enemigos/crab.png" id="10_vrd56"]
 [ext_resource type="Texture2D" uid="uid://dwg76cw6ggska" path="res://Recursos/Extras/fishTile_046.png" id="11_1gbkh"]
 [ext_resource type="Texture2D" uid="uid://lf2rpimark1n" path="res://Recursos/Extras/fishTile_050.png" id="12_3ggyb"]
+[ext_resource type="Texture2D" uid="uid://bjgak8mtrk867" path="res://Recursos/Fondos/leaf.png" id="13_2jaw7"]
+[ext_resource type="Texture2D" uid="uid://dord2g8pa76sg" path="res://Recursos/Fondos/Titles-sheet/fish-assets.png" id="14_jcuee"]
 
 [sub_resource type="Animation" id="Animation_w27sh"]
 resource_name = "Aparece"
@@ -471,6 +473,54 @@ tracks/6/keys = {
 "update": 1,
 "values": [&"flys"]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Leaf:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Ejemplos:animation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"crab"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Ejemplos:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Ejemplos:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(635, 467)]
+}
 
 [sub_resource type="Animation" id="Animation_3ivcc"]
 resource_name = "Desplazamiento"
@@ -579,14 +629,279 @@ tracks/1/keys = {
 "update": 1,
 "values": [&"walk"]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fred:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_spuc1"]
+resource_name = "leaf"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fred:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(435, 459), Vector2(652, 463), Vector2(652, 463)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Leaf:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fred:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"walk", &"stop"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Fred:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_7r8ol"]
+resource_name = "crab"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fred:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fred:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(435, 459), Vector2(776, 462)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Ejemplos:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"crab"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Ejemplos:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_vat5x"]
+resource_name = "jump"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fred:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(435, 459), Vector2(436, 410), Vector2(435, 459)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fred:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"stop"]
+}
+
+[sub_resource type="Animation" id="Animation_nx70d"]
+resource_name = "Algae"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ejemplos:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"plant"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Ejemplos:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(635, 467)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fred:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(435, 459), Vector2(662, 462)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Ejemplos:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Fred:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Fred:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ropai"]
+resource_name = "Fin"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(701, 489), Vector2(704, 351)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fred:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"empty"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:zoom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(2, 2)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y1w2k"]
 _data = {
+"Algae": SubResource("Animation_nx70d"),
 "Desplazamiento": SubResource("Animation_3ivcc"),
+"Fin": SubResource("Animation_ropai"),
 "Fred": SubResource("Animation_f3cfa"),
 "RESET": SubResource("Animation_gabad"),
 "Scene": SubResource("Animation_mj81a"),
-"back": SubResource("Animation_5xlfc")
+"back": SubResource("Animation_5xlfc"),
+"crab": SubResource("Animation_7r8ol"),
+"jump": SubResource("Animation_vat5x"),
+"leaf": SubResource("Animation_spuc1")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4qfg8"]
@@ -773,48 +1088,69 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mdbiy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7p08"]
+atlas = ExtResource("14_jcuee")
+region = Rect2(640, 256, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q65xh"]
 atlas = ExtResource("9_bnhwf")
 region = Rect2(0, 0, 571, 325)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gtiou"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7myjy"]
 atlas = ExtResource("10_vrd56")
 region = Rect2(0, 0, 571, 322)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_uthrj"]
-animations = [{
-"frames": [{
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_mdbiy")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_gtiou")
-}],
-"loop": true,
-"name": &"dance",
-"speed": 4.0
-}]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1j1by"]
+atlas = ExtResource("7_kqpd0")
+region = Rect2(0, 0, 49, 73)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_25psh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_70fyh"]
 atlas = ExtResource("11_1gbkh")
 region = Rect2(0, 32, 64, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_reljl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv6ht"]
 atlas = ExtResource("12_3ggyb")
 region = Rect2(0, 32, 64, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_oo25s"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_xlpc4"]
 animations = [{
 "frames": [{
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_25psh")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_reljl")
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7p08")
 }],
 "loop": true,
-"name": &"100points",
-"speed": 4.0
+"name": &"Rocks",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_q65xh")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_7myjy")
+}],
+"loop": true,
+"name": &"crab",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1j1by")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_70fyh")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_lv6ht")
+}],
+"loop": true,
+"name": &"plant",
+"speed": 6.0
 }]
 
 [node name="CanvasLayer" type="CanvasLayer"]
@@ -834,7 +1170,7 @@ offset_left = -3.0
 offset_top = 559.0
 offset_right = 1421.0
 offset_bottom = 705.0
-color = Color(0.811765, 0.537255, 0.74902, 0)
+color = Color(0.811765, 0.537255, 0.74902, 1)
 
 [node name="AnimationPlayer_Cuadro" type="AnimationPlayer" parent="."]
 root_node = NodePath("../..")
@@ -930,18 +1266,32 @@ sprite_frames = SubResource("SpriteFrames_1yxdl")
 animation = &"flys"
 autoplay = "flys"
 
-[node name="Crab" type="AnimatedSprite2D" parent="."]
-position = Vector2(-221, 474)
-scale = Vector2(0.219957, 0.219957)
-sprite_frames = SubResource("SpriteFrames_uthrj")
-animation = &"dance"
+[node name="Leaf" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(641, 459)
+rotation = 0.413868
+scale = Vector2(0.221417, 0.221417)
+texture = ExtResource("13_2jaw7")
 
-[node name="Algae" type="AnimatedSprite2D" parent="."]
-position = Vector2(-163, 412)
-scale = Vector2(0.707176, 0.734375)
-sprite_frames = SubResource("SpriteFrames_oo25s")
-animation = &"100points"
+[node name="Ejemplos" type="AnimatedSprite2D" parent="."]
+position = Vector2(635, 467)
+scale = Vector2(0.216897, 0.216897)
+sprite_frames = SubResource("SpriteFrames_xlpc4")
+animation = &"crab"
+autoplay = "plant"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 1256.0
+offset_top = -2.0
+offset_right = 1395.0
+offset_bottom = 66.0
+theme = ExtResource("3_6042o")
+theme_override_fonts/font = ExtResource("2_csbyd")
+theme_override_font_sizes/font_size = 30
+text = "Saltar"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

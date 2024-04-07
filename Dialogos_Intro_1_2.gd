@@ -17,7 +17,6 @@ const Texto2 : Array = [
 	'Los cangrejos le restan velocidad a Fred, y eso es algo que no queremos.',
 	'Inntenta comer todas las plantas, ellas ayudan a recuperar la velocidad perdida.',
 	'Esto es todo lo necesario para completar el nivel.',
-	'¡Ah, casi lo olvido! No puedes utilizar dos teclas al mismo tiempo. Por ejemplo, no puedes saltar y correr al mismo tiempo.', 
 	'¡Suerte!'
 ]
 
@@ -45,6 +44,31 @@ func hablar(Texto2:String) -> void:
 		$Fred.play('run')
 		$tecla.play('Right')
 	
+	if index == 7:
+		$tecla.play('empty')
+		$AnimationPlayer_Scene.play('leaf')
+	
+	if index == 8: 
+		$tecla.play('Space')
+		$AnimationPlayer_Scene.play('leaf')
+	
+	if index == 10:
+		$tecla.play('empty')
+		$AnimationPlayer_Scene.play('back')
+		
+	if index == 12:
+		$AnimationPlayer_Scene.play('jump')
+		$tecla.play('Up')
+	
+	if index == 13: 
+		
+		$AnimationPlayer_Scene.play('crab')
+	
+	if index == 14:
+		$tecla.play('empty')
+		$AnimationPlayer_Scene.play('Algae')
+		
+		
 	$Label.text = Texto2
 	$AnimationPlayer_Button.play('Dialogo_Intro1')
 	
@@ -55,6 +79,7 @@ func hablar(Texto2:String) -> void:
 func _ready():
 	$Fred.play('empty')
 	$tecla.play('empty')
+	$Ejemplos.play('empty')
 	$AnimationPlayer_Scene.play('Scene')
 	hide()
 	$Button2.hide()
@@ -72,6 +97,8 @@ func _on_button_pressed():
 		index += 1
 	else:
 		index = 0
+		$AnimationPlayer_Scene.play('Fin')
+		$Button3.visible = false
 		$Label.hide()
 		$CuadroDialogo.hide()
 		$Button.hide()
@@ -85,3 +112,11 @@ func _on_timer_2_timeout():
 	$AnimationPlayer_Cuadro.play('Aparece')
 	$Timer.start()
 	$Timer2.stop()
+
+
+func _on_button_2_pressed():
+	get_tree().change_scene_to_packed(Next)
+
+
+func _on_button_3_pressed():
+	get_tree().change_scene_to_packed(Next)
