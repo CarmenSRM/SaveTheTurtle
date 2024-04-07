@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5j26td05468y"
-path="res://.godot/imported/hoja.png-3ef38829c308e296e0d2623bbbf5057a.ctex"
+uid="uid://br6v51prqbx1r"
+path="res://.godot/imported/Presentadora.png-84b918eed982d21323a11668226d849e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Recursos/Mensajes y Controles/hoja.png"
-dest_files=["res://.godot/imported/hoja.png-3ef38829c308e296e0d2623bbbf5057a.ctex"]
+source_file="res://Recursos/Personajes/Presentadora.png"
+dest_files=["res://.godot/imported/Presentadora.png-84b918eed982d21323a11668226d849e.ctex"]
 
 [params]
 

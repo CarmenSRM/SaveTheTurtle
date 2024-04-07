@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl7oyo1r8mjyq"]
+
+[ext_resource type="PackedScene" uid="uid://dxr8f1jdety0p" path="res://parallaxcost.tscn" id="1_hpt1p"]
+[ext_resource type="PackedScene" uid="uid://d3qb2v616w7mx" path="res://beachsand_map.tscn" id="2_uhe6h"]
+
+[node name="Intro1" type="Node2D"]
+
+[node name="sky" parent="." instance=ExtResource("1_hpt1p")]
+
+[node name="TileMap" parent="." instance=ExtResource("2_uhe6h")]
+position = Vector2(-37, -31)
