@@ -1,0 +1,301 @@
+[gd_scene load_steps=22 format=3 uid="uid://q158wvwnfu64"]
+
+[ext_resource type="Script" path="res://Dialogos_Intro_0_2.gd" id="1_4v30q"]
+[ext_resource type="FontFile" uid="uid://dr8yvckycxwa3" path="res://Recursos/Letras/Born2bSportyV2.ttf" id="2_mdg5u"]
+[ext_resource type="Theme" uid="uid://coood86movgp4" path="res://Recursos/Letras/BtnsColor.tres" id="3_vlmvk"]
+[ext_resource type="Texture2D" uid="uid://br6v51prqbx1r" path="res://Recursos/Personajes/Presentadora.png" id="4_dos32"]
+
+[sub_resource type="Animation" id="Animation_gjbni"]
+resource_name = "Aparece"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CuadroDialogo:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.811765, 0.537255, 0.74902, 0), Color(0.811765, 0.537255, 0.74902, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hr461"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CuadroDialogo:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.811765, 0.537255, 0.74902, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jb61e"]
+_data = {
+"Aparece": SubResource("Animation_gjbni"),
+"RESET": SubResource("Animation_hr461")
+}
+
+[sub_resource type="Animation" id="Animation_koqji"]
+resource_name = "Dialog"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Presentadora:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Calla2"]
+}
+
+[sub_resource type="Animation" id="Animation_tiohk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Presentadora:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Habla2"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e0cdb"]
+_data = {
+"Dialog": SubResource("Animation_koqji"),
+"RESET": SubResource("Animation_tiohk")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxp2n"]
+atlas = ExtResource("4_dos32")
+region = Rect2(124, 0, 124, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yr0a7"]
+atlas = ExtResource("4_dos32")
+region = Rect2(248, 0, 124, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_japfp"]
+atlas = ExtResource("4_dos32")
+region = Rect2(0, 184, 130, 182)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkj20"]
+atlas = ExtResource("4_dos32")
+region = Rect2(244, 186, 122, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqgi6"]
+atlas = ExtResource("4_dos32")
+region = Rect2(123, 185, 123, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylfs5"]
+atlas = ExtResource("4_dos32")
+region = Rect2(252, 368, 126, 183)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wa5jd"]
+atlas = ExtResource("4_dos32")
+region = Rect2(0, 368, 125, 182)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp6sq"]
+atlas = ExtResource("4_dos32")
+region = Rect2(123, 368, 123, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf1od"]
+atlas = ExtResource("4_dos32")
+region = Rect2(0, 0, 27, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ji8cy"]
+atlas = ExtResource("4_dos32")
+region = Rect2(0, 0, 130, 183)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b32oi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxp2n")
+}],
+"loop": true,
+"name": &"Calla",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yr0a7")
+}],
+"loop": true,
+"name": &"Calla2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_japfp")
+}],
+"loop": true,
+"name": &"Felicita ",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkj20")
+}],
+"loop": true,
+"name": &"Fin_saludo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_rqgi6")
+}],
+"loop": true,
+"name": &"Habla",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylfs5")
+}],
+"loop": true,
+"name": &"Habla2",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_wa5jd")
+}],
+"loop": true,
+"name": &"Hola",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp6sq")
+}],
+"loop": true,
+"name": &"No",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yf1od")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ji8cy")
+}],
+"loop": true,
+"name": &"otro",
+"speed": 5.0
+}]
+
+[node name="Dialogos" type="CanvasLayer"]
+process_mode = 1
+script = ExtResource("1_4v30q")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="CuadroDialogo" type="ColorRect" parent="."]
+offset_left = 140.0
+offset_top = 414.0
+offset_right = 1272.0
+offset_bottom = 693.0
+color = Color(0.811765, 0.537255, 0.74902, 0)
+
+[node name="AnimationPlayer_Cuadro" type="AnimationPlayer" parent="."]
+autoplay = "Aparece"
+libraries = {
+"": SubResource("AnimationLibrary_jb61e")
+}
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+offset_left = 115.0
+offset_top = 192.0
+offset_right = 1275.0
+offset_bottom = 694.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 236.0
+offset_top = 451.0
+offset_right = 1153.0
+offset_bottom = 674.0
+theme_override_fonts/font = ExtResource("2_mdg5u")
+theme_override_font_sizes/font_size = 30
+autowrap_mode = 2
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 1095.0
+offset_top = 624.0
+offset_right = 1250.0
+offset_bottom = 679.0
+theme = ExtResource("3_vlmvk")
+theme_override_fonts/font = ExtResource("2_mdg5u")
+theme_override_font_sizes/font_size = 30
+text = "Siguiente "
+
+[node name="AnimationPlayer_Button" type="AnimationPlayer" parent="."]
+autoplay = "Dialog"
+libraries = {
+"": SubResource("AnimationLibrary_e0cdb")
+}
+
+[node name="Presentadora" type="AnimatedSprite2D" parent="."]
+position = Vector2(142, 541)
+scale = Vector2(1.83065, 1.83065)
+sprite_frames = SubResource("SpriteFrames_b32oi")
+animation = &"Habla2"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 487.0
+offset_top = 258.0
+offset_right = 867.0
+offset_bottom = 392.0
+theme = ExtResource("3_vlmvk")
+theme_override_fonts/font = ExtResource("2_mdg5u")
+theme_override_font_sizes/font_size = 60
+text = "Comenzar"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
