@@ -1,6 +1,8 @@
 extends Area2D
 
-@export var Win = preload("res://Win.tscn") as PackedScene
+@export var Win1 = preload("res://Win.tscn") as PackedScene
+
+@export var Win2 = preload("res://Inicio.tscn") as PackedScene
 
 func _ready():
 	pass 
@@ -11,4 +13,7 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if "BabyFred" in body.get_name():
-		get_tree().change_scene_to_packed(Win) #Cambio de escena. 
+		get_tree().change_scene_to_packed(Win1) #Cambio de escena. 
+	elif "swimer_fred" in body.get_name():
+		get_tree().change_scene_to_packed(Win2) #Cambio de escena. 
+		

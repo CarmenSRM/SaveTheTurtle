@@ -1,0 +1,420 @@
+[gd_scene load_steps=35 format=3 uid="uid://0xycwcq4ji8o"]
+
+[ext_resource type="PackedScene" uid="uid://cidjs7jjsnvsc" path="res://seasparallax.tscn" id="1_og8l3"]
+[ext_resource type="PackedScene" uid="uid://dpkbinl4f12sk" path="res://Sand.tscn" id="2_aojqo"]
+[ext_resource type="PackedScene" uid="uid://bawx8jfcd4dcn" path="res://beachend_map.tscn" id="3_qntx5"]
+[ext_resource type="Texture2D" uid="uid://bgu05e361t1ds" path="res://Recursos/Personajes/FredsSide2.png" id="4_tfjth"]
+[ext_resource type="Texture2D" uid="uid://cnkr41i5bpdua" path="res://Recursos/Personajes/FredsSide.png" id="5_7ncwe"]
+[ext_resource type="Texture2D" uid="uid://bvyv6ql57a2mb" path="res://Recursos/Enemigos/Seagull_fly.png" id="6_34w7d"]
+[ext_resource type="Texture2D" uid="uid://bbpbfqhcos07h" path="res://Recursos/Enemigos/Seagull_Walk.png" id="7_q6upu"]
+[ext_resource type="Theme" uid="uid://coood86movgp4" path="res://Recursos/Letras/BtnsColor.tres" id="8_d5fld"]
+[ext_resource type="Script" path="res://OverBtns2.gd" id="8_qr7ck"]
+[ext_resource type="FontFile" uid="uid://dr8yvckycxwa3" path="res://Recursos/Letras/Born2bSportyV2.ttf" id="9_lh8js"]
+[ext_resource type="Texture2D" uid="uid://d16gccj81bx2g" path="res://Recursos/Mensajes y Controles/gameOver.png" id="10_bjacv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rl84v"]
+atlas = ExtResource("4_tfjth")
+region = Rect2(0, 204, 134, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8pln"]
+atlas = ExtResource("5_7ncwe")
+region = Rect2(0, 204, 134, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgdeo"]
+atlas = ExtResource("5_7ncwe")
+region = Rect2(134, 102, 134, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhd1e"]
+atlas = ExtResource("5_7ncwe")
+region = Rect2(134, 204, 134, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g8j7"]
+atlas = ExtResource("5_7ncwe")
+region = Rect2(134, 0, 134, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yx742"]
+atlas = ExtResource("5_7ncwe")
+region = Rect2(0, 204, 134, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bs3qy"]
+atlas = ExtResource("5_7ncwe")
+region = Rect2(134, 102, 134, 102)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjs5h"]
+atlas = ExtResource("5_7ncwe")
+region = Rect2(134, 204, 134, 102)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vyakm"]
+animations = [{
+"frames": [{
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_rl84v")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_c8pln")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_bgdeo")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_vhd1e")
+}],
+"loop": true,
+"name": &"run",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6g8j7")
+}],
+"loop": true,
+"name": &"stop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_yx742")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_bs3qy")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_yjs5h")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 12.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnos6"]
+atlas = ExtResource("6_34w7d")
+region = Rect2(0, 0, 282, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1afi"]
+atlas = ExtResource("6_34w7d")
+region = Rect2(282, 0, 282, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56enk"]
+atlas = ExtResource("6_34w7d")
+region = Rect2(564, 0, 282, 294)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ce2kc"]
+atlas = ExtResource("7_q6upu")
+region = Rect2(219, 190, 219, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17bu0"]
+atlas = ExtResource("7_q6upu")
+region = Rect2(0, 190, 219, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5ho6"]
+atlas = ExtResource("7_q6upu")
+region = Rect2(438, 0, 219, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3p0t"]
+atlas = ExtResource("7_q6upu")
+region = Rect2(219, 0, 219, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jernc"]
+atlas = ExtResource("7_q6upu")
+region = Rect2(0, 0, 219, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvni8"]
+atlas = ExtResource("7_q6upu")
+region = Rect2(0, 190, 219, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjobe"]
+atlas = ExtResource("7_q6upu")
+region = Rect2(219, 190, 219, 190)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qxqsn"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_gnos6")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_f1afi")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_56enk")
+}],
+"loop": true,
+"name": &"flys",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_ce2kc")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_17bu0")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_r5ho6")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_f3p0t")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_jernc")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_hvni8")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_qjobe")
+}],
+"loop": true,
+"name": &"walk2",
+"speed": 4.0
+}]
+
+[sub_resource type="Animation" id="Animation_yxrkg"]
+resource_name = "Comer"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fred:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(577, 472), Vector2(577, 472), Vector2(1339, -46)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fred:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"hurt"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18, 18.5, 19, 19.5, 20),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Seagull:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"flys"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Seagull:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-142, 1), Vector2(621, 399), Vector2(1388, -114)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBoxContainer/Salir:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VBoxContainer/Repetir:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_svd1t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fred:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(577, 472)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fred:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"hurt"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Seagull:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"flys"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Seagull:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-142, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBoxContainer/Salir:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VBoxContainer/Repetir:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8sgk3"]
+_data = {
+"Comer": SubResource("Animation_yxrkg"),
+"RESET": SubResource("Animation_svd1t")
+}
+
+[node name="Dead2" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_og8l3")]
+
+[node name="TileMap" parent="." instance=ExtResource("2_aojqo")]
+visible = false
+
+[node name="beachSeas" parent="." instance=ExtResource("3_qntx5")]
+position = Vector2(-77720, -143)
+
+[node name="Fred" type="AnimatedSprite2D" parent="."]
+position = Vector2(577, 472)
+scale = Vector2(0.352612, 0.360294)
+sprite_frames = SubResource("SpriteFrames_vyakm")
+animation = &"hurt"
+
+[node name="Seagull" type="AnimatedSprite2D" parent="."]
+position = Vector2(-142, 1)
+sprite_frames = SubResource("SpriteFrames_qxqsn")
+animation = &"flys"
+autoplay = "flys"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 524.0
+offset_top = 407.0
+offset_right = 772.0
+offset_bottom = 598.0
+theme_override_constants/separation = 20
+script = ExtResource("8_qr7ck")
+
+[node name="Repetir" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("8_d5fld")
+theme_override_fonts/font = ExtResource("9_lh8js")
+theme_override_font_sizes/font_size = 40
+text = "Repetir"
+
+[node name="Salir" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("8_d5fld")
+theme_override_fonts/font = ExtResource("9_lh8js")
+theme_override_font_sizes/font_size = 40
+text = "Salir"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(639, 184)
+scale = Vector2(0.289684, 0.289684)
+texture = ExtResource("10_bjacv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8sgk3")
+}
+
+[connection signal="pressed" from="VBoxContainer/Repetir" to="VBoxContainer" method="_on_repetir_pressed"]
+[connection signal="pressed" from="VBoxContainer/Salir" to="VBoxContainer" method="_on_salir_pressed"]
