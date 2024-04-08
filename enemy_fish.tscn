@@ -112,3 +112,5 @@ animation = &"swiming"
 position = Vector2(28, -2)
 rotation = -1.58315
 shape = SubResource("CapsuleShape2D_oyi76")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

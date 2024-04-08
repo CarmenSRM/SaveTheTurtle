@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://cx7pu6ryhn35m"]
+[gd_scene load_steps=2 format=3 uid="uid://cx7pu6ryhn35m"]
+
+[ext_resource type="PackedScene" uid="uid://cidjs7jjsnvsc" path="res://seasparallax.tscn" id="1_j2jjy"]
 
 [node name="Intro2" type="Node2D"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("1_j2jjy")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer"]

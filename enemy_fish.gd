@@ -1,5 +1,7 @@
 extends Area2D
 
+@export var Next = preload("res://Dead_2.tscn") as PackedScene
+
 func _ready():
 	$AnimatedSprite2D.play("swiming")
 	$AnimatedSprite2D2.play("swiming")
@@ -15,5 +17,8 @@ func _ready():
 	$AnimatedSprite2D12.play("swiming")
 
 func _process(delta):
-	pass
+	if Globals.vida == 0:
+		get_tree().change_scene_to_packed(Next)
 
+func _on_body_entered(body):
+	Globals.vida -=1

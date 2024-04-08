@@ -4,7 +4,7 @@ var speed = 500
 var current_dir = "none"
 #var fredPos  #Posiblemente se puede eliminar (Revisar)
 
-@export var Dead = preload("res://Portada.tscn") as PackedScene #Creación de la escena
+@export var Dead = preload("res://Inicio.tscn") as PackedScene #Creación de la escena
 
 func _ready(): #Lo hice así para que  la animación de inicio quede en la dirección correcta. 
 	var an = $AnimatedSprite2D

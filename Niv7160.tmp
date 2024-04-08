@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://nr8g461t6joy" path="res://jelly_fish.tscn" id="9_osgx7"]
 
 [node name="Nivel_Dos" type="Node2D"]
-position = Vector2(16, 0)
+position = Vector2(-2, 0)
 
 [node name="sky" parent="." instance=ExtResource("3_bknuc")]
 
