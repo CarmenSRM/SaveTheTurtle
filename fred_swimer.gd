@@ -4,7 +4,7 @@ var speed = 500
 var current_dir = "none"
 #var fredPos  #Posiblemente se puede eliminar (Revisar)
 
-@export var Dead = preload("res://Inicio.tscn") as PackedScene #Creación de la escena
+@export var Dead = preload("res://Dead_2.tscn") as PackedScene #Creación de la escena
 
 func _ready(): #Lo hice así para que  la animación de inicio quede en la dirección correcta. 
 	var an = $AnimatedSprite2D
@@ -81,23 +81,10 @@ func play_anim(movement):
 			anim.play("swim")
 
 func _on_enemies_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
-	print(":(")
-	print(speed)
-	if speed >= 100:
-		speed -=  100 #Agregar un timer y avomodar la herida 
-		velocity.y = 200
-		velocity.x = 0
-		#$AnimatedSprite2D.play("hurt")
-	else: 
-		#$AnimatedSprite2D.play("hurt")
-		get_tree().change_scene_to_packed(Dead) #Cambio de escena. 
-	velocity.x = speed
-	#$AnimatedSprite2D.play("walk")
-	print(speed)
+	Globals.vida -=1
+	if Globals.vida == 1:
+		get_tree().change_scene_to_packed(Dead)
 
 
 func _on_foods_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
-	print(":)")
-	print(speed)
-	speed +=  100
-	print(speed)
+	Globals.vida +=1

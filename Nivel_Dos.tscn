@@ -21,11 +21,8 @@ position = Vector2(-44, -1)
 [node name="Map2" parent="." instance=ExtResource("1_4pbj8")]
 position = Vector2(27472, 0)
 
-[node name="Map3" parent="." instance=ExtResource("1_4pbj8")]
-position = Vector2(54990, 0)
-
 [node name="fredy" parent="." instance=ExtResource("3_yoh4c")]
-position = Vector2(-168, 341)
+position = Vector2(-188, 475)
 
 [node name="EnemyFish" parent="." instance=ExtResource("4_bvnh1")]
 position = Vector2(3328, 434)
@@ -36,8 +33,20 @@ position = Vector2(9896, 323)
 [node name="EnemyFish3" parent="." instance=ExtResource("4_bvnh1")]
 position = Vector2(16663, 595)
 
+[node name="EnemyFish10" parent="." instance=ExtResource("4_bvnh1")]
+position = Vector2(18235, 328)
+
+[node name="EnemyFish11" parent="." instance=ExtResource("4_bvnh1")]
+position = Vector2(20180, 540)
+
+[node name="EnemyFish12" parent="." instance=ExtResource("4_bvnh1")]
+position = Vector2(23180, 307)
+
 [node name="EnemyFish4" parent="." instance=ExtResource("4_bvnh1")]
 position = Vector2(26865, 276)
+
+[node name="EnemyFish13" parent="." instance=ExtResource("4_bvnh1")]
+position = Vector2(29124, 525)
 
 [node name="EnemyFish5" parent="." instance=ExtResource("4_bvnh1")]
 position = Vector2(31673, 570)
@@ -48,11 +57,20 @@ position = Vector2(39354, 296)
 [node name="EnemyFish7" parent="." instance=ExtResource("4_bvnh1")]
 position = Vector2(46927, 440)
 
+[node name="EnemyFish15" parent="." instance=ExtResource("4_bvnh1")]
+position = Vector2(48588, 383)
+
+[node name="EnemyFish16" parent="." instance=ExtResource("4_bvnh1")]
+position = Vector2(49600, 483)
+
 [node name="EnemyFish8" parent="." instance=ExtResource("4_bvnh1")]
-position = Vector2(53539, 553)
+position = Vector2(12458, 436)
 
 [node name="EnemyFish9" parent="." instance=ExtResource("4_bvnh1")]
-position = Vector2(64026, 331)
+position = Vector2(40828, 276)
+
+[node name="EnemyFish14" parent="." instance=ExtResource("4_bvnh1")]
+position = Vector2(44377, 525)
 
 [node name="algae" parent="." instance=ExtResource("6_v8hky")]
 position = Vector2(-29, 58)
@@ -79,22 +97,22 @@ position = Vector2(37574, 516)
 position = Vector2(26797, 468)
 
 [node name="JellyFish8" parent="." instance=ExtResource("9_osgx7")]
-position = Vector2(59380, 459)
+position = Vector2(36182, 404)
 
 [node name="JellyFish9" parent="." instance=ExtResource("9_osgx7")]
-position = Vector2(53828, 327)
+position = Vector2(5598, 491)
 
 [node name="JellyFish10" parent="." instance=ExtResource("9_osgx7")]
 position = Vector2(23742, 562)
 
 [node name="JellyFish11" parent="." instance=ExtResource("9_osgx7")]
-position = Vector2(65028, 535)
+position = Vector2(41830, 480)
 
 [node name="JellyFish12" parent="." instance=ExtResource("9_osgx7")]
-position = Vector2(68700, 211)
+position = Vector2(45502, 191)
 
 [node name="JellyFish13" parent="." instance=ExtResource("9_osgx7")]
-position = Vector2(76539, 570)
+position = Vector2(12684, 550)
 
 [node name="crab" parent="." instance=ExtResource("7_2dn6t")]
 position = Vector2(37431, 610.999)
@@ -107,16 +125,89 @@ position = Vector2(10065, 591)
 position = Vector2(23782, 657)
 
 [node name="crab4" parent="." instance=ExtResource("7_2dn6t")]
-position = Vector2(76374, 637)
+position = Vector2(13048, 655)
 
 [node name="crab5" parent="." instance=ExtResource("7_2dn6t")]
 position = Vector2(46112, 640)
 
 [node name="crab6" parent="." instance=ExtResource("7_2dn6t")]
-position = Vector2(65149, 594)
+position = Vector2(41951, 539)
 
 [node name="trash" parent="." instance=ExtResource("5_x1rdw")]
-position = Vector2(-283, 225)
+position = Vector2(4035, 541)
+rotation = 0.484963
+
+[node name="trash2" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(11583, 363)
+rotation = 0.484963
+
+[node name="trash3" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(18751, 496)
+rotation = 0.484963
+
+[node name="trash4" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(19824, 352)
+rotation = 0.484963
+
+[node name="trash5" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(24828, 553)
+rotation = 0.484963
+
+[node name="trash10" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(26180, 471.999)
+rotation = 0.484963
+
+[node name="trash11" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(28135, 395.001)
+rotation = 0.484963
+
+[node name="trash12" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(29731, 309.001)
+rotation = 0.484963
+
+[node name="trash13" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(32781, 480)
+rotation = 0.484963
+
+[node name="trash14" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(35097, 394)
+rotation = 0.484963
+
+[node name="trash15" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(38974, 536.999)
+rotation = 0.484963
+
+[node name="trash16" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(40278, 450.999)
+rotation = 0.484963
+
+[node name="trash17" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(43172, 344.002)
+rotation = 0.484963
+
+[node name="trash18" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(45388, 458.002)
+rotation = 0.484963
+
+[node name="trash19" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(48018, 494)
+rotation = 0.484963
+
+[node name="trash6" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(8087, 508)
+rotation = 0.484963
+
+[node name="trash7" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(15661, 333.999)
+rotation = 0.484963
+
+[node name="trash8" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(5420, 337)
+rotation = 0.484963
+
+[node name="trash9" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(21823, 320)
+rotation = 0.484963
 
 [node name="Meta" parent="." instance=ExtResource("8_thu8g")]
-position = Vector2(81394, 453)
+position = Vector2(52952, 432)

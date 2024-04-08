@@ -1,36 +1,69 @@
-[gd_scene load_steps=5 format=3 uid="uid://brnj8m0jvomdb"]
+[gd_scene load_steps=3 format=3 uid="uid://brnj8m0jvomdb"]
 
-[ext_resource type="Texture2D" uid="uid://deodf74k3rjsd" path="res://Recursos/Extras/Trash.png" id="1_wahyt"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yv3cr"]
-atlas = ExtResource("1_wahyt")
-region = Rect2(0, 0, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_383fx"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yv3cr")
-}],
-"loop": true,
-"name": &"plastic",
-"speed": 1.0
-}]
+[ext_resource type="Texture2D" uid="uid://doe6v1pwb1bre" path="res://Recursos/Enemigos/Botella.png" id="1_ccpiy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_elur2"]
-radius = 15.2052
-height = 30.4105
+radius = 64.5148
+height = 130.071
 
 [node name="Area2D" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0.728332, -0.736101)
-scale = Vector2(0.47724, 0.463591)
-sprite_frames = SubResource("SpriteFrames_383fx")
-animation = &"plastic"
-frame_progress = 0.712183
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-29, 8)
+rotation = -0.392244
+scale = Vector2(0.0960744, 0.0960744)
+texture = ExtResource("1_ccpiy")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(14, -35)
+rotation = -0.240053
+scale = Vector2(0.0960744, 0.0960744)
+texture = ExtResource("1_ccpiy")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(13, 24)
+rotation = 1.12075
+scale = Vector2(0.0960744, 0.0960744)
+texture = ExtResource("1_ccpiy")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(-14, -29)
+rotation = -2.17099
+scale = Vector2(0.0960744, 0.0960744)
+texture = ExtResource("1_ccpiy")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(28, -17)
+rotation = 0.938265
+scale = Vector2(0.0960744, 0.0960744)
+texture = ExtResource("1_ccpiy")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(-13, 11)
+rotation = 0.446342
+scale = Vector2(0.0960744, 0.0960744)
+texture = ExtResource("1_ccpiy")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(17, 13)
+rotation = -0.145985
+scale = Vector2(0.0960744, 0.0960744)
+texture = ExtResource("1_ccpiy")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(-7, -15)
+scale = Vector2(0.0960744, 0.0960744)
+texture = ExtResource("1_ccpiy")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(52, 5.96046e-08)
+rotation = -0.351177
+scale = Vector2(0.0960744, 0.0960744)
+texture = ExtResource("1_ccpiy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -1)
-rotation = -0.463653
+position = Vector2(10, -2)
+rotation = -2.11864
 shape = SubResource("CapsuleShape2D_elur2")
