@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://xqayl60gkqnr"]
+
+[ext_resource type="Texture2D" uid="uid://bjjai44ldmybt" path="res://Recursos/Fondos/Inicio.png" id="1_pqrox"]
+[ext_resource type="Texture2D" uid="uid://cm0vqkr4svkux" path="res://Recursos/Letras/logo.png" id="2_v5ww3"]
+[ext_resource type="FontFile" uid="uid://dr8yvckycxwa3" path="res://Recursos/Letras/Born2bSportyV2.ttf" id="3_6lpu7"]
+[ext_resource type="Theme" uid="uid://coood86movgp4" path="res://Recursos/Letras/BtnsColor.tres" id="4_k58wj"]
+[ext_resource type="Script" path="res://InfBtn.gd" id="4_lg6kc"]
+
+[node name="Info" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -1.0
+offset_top = -38.0
+offset_right = 1399.0
+offset_bottom = 729.0
+texture = ExtResource("1_pqrox")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 268.0
+offset_top = 92.0
+offset_right = 606.0
+offset_bottom = 391.0
+texture = ExtResource("2_v5ww3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 646.0
+offset_top = 43.0
+offset_right = 1369.0
+offset_bottom = 676.0
+color = Color(0.811765, 0.537255, 0.74902, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 18.0
+offset_right = 695.0
+offset_bottom = 704.0
+theme_override_fonts/font = ExtResource("3_6lpu7")
+theme_override_font_sizes/font_size = 30
+text = "“Save the Turtle” aborda la problemática del peligro de extinción de las tortugas marinas a través de una combinación de educación ambiental y gamificación.
+La educación ambiental es una corriente teórica que busca aumentar la conciencia y el entendimiento de los problemas ambientales, así como fomentar el comportamiento responsable y sostenible. En “Save the Turtle”, los jugadores aprenden sobre las amenazas a las tortugas marinas y la importancia de su conservación a través de la narrativa y la mecánica del juego.
+En “Save the Turtle”, los jugadores se ponen en la piel de una cría de tortuga marina, Fred, y deben navegar por un mundo lleno de peligros y depredadores. Esta experiencia inmersiva ayuda a los jugadores a conectar emocionalmente con la problemática y a entender mejor las dificultades que enfrentan las tortugas marinas.
+"
+autowrap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 216.0
+offset_top = 513.0
+offset_right = 411.0
+offset_bottom = 604.0
+script = ExtResource("4_lg6kc")
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_k58wj")
+theme_override_fonts/font = ExtResource("3_6lpu7")
+theme_override_font_sizes/font_size = 30
+text = "Regresar"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer" method="_on_button_pressed"]

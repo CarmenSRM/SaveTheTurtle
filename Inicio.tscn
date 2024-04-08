@@ -48,3 +48,4 @@ theme_override_font_sizes/font_size = 40
 text = "Opciones"
 
 [connection signal="pressed" from="VBoxContainer/Comenzar" to="VBoxContainer" method="_on_comenzar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Opciones" to="VBoxContainer" method="_on_opciones_pressed"]
