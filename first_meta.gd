@@ -2,7 +2,7 @@ extends Area2D
 
 @export var Win1 = preload("res://Win.tscn") as PackedScene
 
-@export var Win2 = preload("res://Inicio.tscn") as PackedScene
+@export var Win2 = preload("res://Fin.tscn") as PackedScene
 
 func _ready():
 	pass 

@@ -1,9 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://q158wvwnfu64"]
+[gd_scene load_steps=26 format=3 uid="uid://cjaq8hsrk4g17"]
 
-[ext_resource type="Script" path="res://Dialogos_Intro_0_2.gd" id="1_4v30q"]
-[ext_resource type="FontFile" uid="uid://dr8yvckycxwa3" path="res://Recursos/Letras/Born2bSportyV2.ttf" id="2_mdg5u"]
-[ext_resource type="Theme" uid="uid://coood86movgp4" path="res://Recursos/Letras/BtnsColor.tres" id="3_vlmvk"]
-[ext_resource type="Texture2D" uid="uid://br6v51prqbx1r" path="res://Recursos/Personajes/Presentadora.png" id="4_dos32"]
+[ext_resource type="Texture2D" uid="uid://bjjai44ldmybt" path="res://Recursos/Fondos/Inicio.png" id="1_4q24d"]
+[ext_resource type="Texture2D" uid="uid://cm0vqkr4svkux" path="res://Recursos/Letras/logo.png" id="2_0c4oq"]
+[ext_resource type="FontFile" uid="uid://dr8yvckycxwa3" path="res://Recursos/Letras/Born2bSportyV2.ttf" id="3_gkkad"]
+[ext_resource type="Script" path="res://FinMensaje.gd" id="3_sowcj"]
+[ext_resource type="Texture2D" uid="uid://br6v51prqbx1r" path="res://Recursos/Personajes/Presentadora.png" id="4_ox85l"]
+[ext_resource type="Theme" uid="uid://coood86movgp4" path="res://Recursos/Letras/BtnsColor.tres" id="5_0b80n"]
 
 [sub_resource type="Animation" id="Animation_gjbni"]
 resource_name = "Aparece"
@@ -104,46 +106,46 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mxp2n"]
-atlas = ExtResource("4_dos32")
+atlas = ExtResource("4_ox85l")
 region = Rect2(124, 0, 124, 183)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yr0a7"]
-atlas = ExtResource("4_dos32")
+atlas = ExtResource("4_ox85l")
 region = Rect2(248, 0, 124, 183)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_japfp"]
-atlas = ExtResource("4_dos32")
+atlas = ExtResource("4_ox85l")
 region = Rect2(0, 184, 130, 182)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xkj20"]
-atlas = ExtResource("4_dos32")
+atlas = ExtResource("4_ox85l")
 region = Rect2(244, 186, 122, 183)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rqgi6"]
-atlas = ExtResource("4_dos32")
+atlas = ExtResource("4_ox85l")
 region = Rect2(123, 185, 123, 183)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ylfs5"]
-atlas = ExtResource("4_dos32")
+atlas = ExtResource("4_ox85l")
 region = Rect2(252, 368, 126, 183)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wa5jd"]
-atlas = ExtResource("4_dos32")
+atlas = ExtResource("4_ox85l")
 region = Rect2(0, 368, 125, 182)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vp6sq"]
-atlas = ExtResource("4_dos32")
+atlas = ExtResource("4_ox85l")
 region = Rect2(123, 368, 123, 176)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yf1od"]
-atlas = ExtResource("4_dos32")
+atlas = ExtResource("4_ox85l")
 region = Rect2(0, 0, 27, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ji8cy"]
-atlas = ExtResource("4_dos32")
+atlas = ExtResource("4_ox85l")
 region = Rect2(0, 0, 130, 183)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_b32oi"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_1yt17"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -226,86 +228,93 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Dialogos" type="CanvasLayer"]
-process_mode = 1
-script = ExtResource("1_4v30q")
+[sub_resource type="Animation" id="Animation_6dhha"]
+resource_name = "Fin"
 
-[node name="Timer" type="Timer" parent="."]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0jgno"]
+_data = {
+"Fin": SubResource("Animation_6dhha")
+}
+
+[node name="Fin" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -1.0
+offset_top = -38.0
+offset_right = 1399.0
+offset_bottom = 729.0
+texture = ExtResource("1_4q24d")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 268.0
+offset_top = 92.0
+offset_right = 606.0
+offset_bottom = 391.0
+texture = ExtResource("2_0c4oq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("3_sowcj")
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
 wait_time = 3.0
 
-[node name="CuadroDialogo" type="ColorRect" parent="."]
-offset_left = 140.0
-offset_top = 414.0
-offset_right = 1272.0
-offset_bottom = 693.0
+[node name="CuadroDialogo" type="ColorRect" parent="CanvasLayer"]
+offset_left = 803.0
+offset_top = 509.0
+offset_right = 1355.0
+offset_bottom = 685.0
 color = Color(0.811765, 0.537255, 0.74902, 0)
 
-[node name="AnimationPlayer_Cuadro" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer_Cuadro" type="AnimationPlayer" parent="CanvasLayer"]
 autoplay = "Aparece"
 libraries = {
 "": SubResource("AnimationLibrary_jb61e")
 }
 
-[node name="ReferenceRect" type="ReferenceRect" parent="."]
+[node name="ReferenceRect" type="ReferenceRect" parent="CanvasLayer"]
 offset_left = 14.0
 offset_right = 1403.0
 offset_bottom = 694.0
 
-[node name="Label" type="Label" parent="."]
-offset_left = 236.0
-offset_top = 451.0
-offset_right = 1153.0
-offset_bottom = 674.0
-theme_override_fonts/font = ExtResource("2_mdg5u")
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 831.0
+offset_top = 531.0
+offset_right = 1237.0
+offset_bottom = 650.0
+theme_override_fonts/font = ExtResource("3_gkkad")
 theme_override_font_sizes/font_size = 30
 autowrap_mode = 2
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="CanvasLayer"]
 visible = false
-offset_left = 1095.0
-offset_top = 624.0
-offset_right = 1250.0
-offset_bottom = 679.0
-theme = ExtResource("3_vlmvk")
-theme_override_fonts/font = ExtResource("2_mdg5u")
-theme_override_font_sizes/font_size = 30
-text = "Siguiente "
+offset_left = 1152.0
+offset_top = 631.0
+offset_right = 1248.0
+offset_bottom = 671.0
+theme = ExtResource("5_0b80n")
+theme_override_fonts/font = ExtResource("3_gkkad")
+theme_override_font_sizes/font_size = 20
+text = "Siquiente
+"
 
-[node name="AnimationPlayer_Button" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer_Button" type="AnimationPlayer" parent="CanvasLayer"]
 autoplay = "Dialog"
 libraries = {
 "": SubResource("AnimationLibrary_e0cdb")
 }
 
-[node name="Presentadora" type="AnimatedSprite2D" parent="."]
-position = Vector2(142, 541)
-scale = Vector2(1.83065, 1.83065)
-sprite_frames = SubResource("SpriteFrames_b32oi")
+[node name="Presentadora" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(1324, 589)
+scale = Vector2(1.23791, 1.23791)
+sprite_frames = SubResource("SpriteFrames_1yt17")
 animation = &"Habla2"
 
-[node name="Button2" type="Button" parent="."]
-offset_left = 487.0
-offset_top = 258.0
-offset_right = 867.0
-offset_bottom = 392.0
-theme = ExtResource("3_vlmvk")
-theme_override_fonts/font = ExtResource("2_mdg5u")
-theme_override_font_sizes/font_size = 60
-text = "Comenzar"
+[node name="AnimationPlayer_Scenes" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0jgno")
+}
 
-[node name="Button3" type="Button" parent="."]
-offset_left = 1229.0
-offset_top = 13.0
-offset_right = 1377.0
-offset_bottom = 89.0
-theme = ExtResource("3_vlmvk")
-theme_override_fonts/font = ExtResource("2_mdg5u")
-theme_override_font_sizes/font_size = 30
-text = "Saltar"
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer" method="_on_button_pressed"]
