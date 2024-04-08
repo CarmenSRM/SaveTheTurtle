@@ -112,19 +112,19 @@ position = Vector2(56245, 608)
 position = Vector2(67061, 608)
 
 [node name="Enemy" parent="." instance=ExtResource("2_qcak3")]
-position = Vector2(-3020, -549)
+position = Vector2(-975, -522)
 
 [node name="Enemy2" parent="." instance=ExtResource("2_qcak3")]
-position = Vector2(7358, -9259)
+position = Vector2(7486, -4523)
 
 [node name="Enemy3" parent="." instance=ExtResource("2_qcak3")]
-position = Vector2(31533, -20593)
+position = Vector2(27693, -10737)
 
 [node name="Enemy4" parent="." instance=ExtResource("2_qcak3")]
-position = Vector2(53549, -31729)
+position = Vector2(53805, -16241)
 
 [node name="Enemy5" parent="." instance=ExtResource("2_qcak3")]
-position = Vector2(70445, -42481)
+position = Vector2(69933, -22385)
 
 [node name="limit" parent="." instance=ExtResource("10_q4por")]
 position = Vector2(40541, -225)

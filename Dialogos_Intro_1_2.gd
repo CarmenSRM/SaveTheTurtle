@@ -56,7 +56,7 @@ func hablar(Texto2:String) -> void:
 		$tecla.play('empty')
 		$AnimationPlayer_Scene.play('back')
 		
-	if index == 12:
+	if index == 11:
 		$AnimationPlayer_Scene.play('jump')
 		$tecla.play('Up')
 	

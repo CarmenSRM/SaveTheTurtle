@@ -4,6 +4,7 @@ const Texto : Array = [
 	'¡Felicidades! Has ayudado a Fred a cruzar la playa y escapar de todos esos peligros. ¡Has hecho un gran trabajo!',
 	'Ahora, en este nuevo nivel, tu misión es evitar los peligros que acechan en el mar.',
 	'Ayuda a Fred a decir lo que debe comer y lo que no.',
+	'Encontrarás pequeñas medusas que aumentarán la velocidad de Fred.',
 	'Evita a los depredadores marinos.', 
 	'Aléjate de la basura; la contaminación en los mares es más grande de lo que piensas.',
 	'En este nuevo nivel, utiliza la flecha superior para subir.',
@@ -14,7 +15,7 @@ const Texto : Array = [
 
 var index = 0
 
-@export var Next = preload("res://Nivel_Dos.tscn") as PackedScene
+@export var Next = preload("res://NivelDos.tscn") as PackedScene
 
 func hablar(Texto:String) -> void:
 	show()
@@ -22,11 +23,27 @@ func hablar(Texto:String) -> void:
 		$Presentadora.play("Felicita ")
 		$Timer.stop()
 		$Button.visible = true
+	elif index == 3:
+		$Presentadora.play('Habla')
+		$JellyFish.visible = true
+	elif index == 4:
+		$Presentadora.play('Habla')
+		$JellyFish.visible = false
+		$EnemyFish.visible = true
+		$crab.visible = true 
 	elif index == 5:
-		$tecla.play("Up")
+		$crab.visible = false
+		$EnemyFish.visible =false
+		$Trash.visible = true
 	elif index == 6:
-		$tecla.play('Down')
+		$Trash.visible = false
+		$Presentadora.play('Habla')
+		$tecla.play("Up")
 	elif index == 7:
+		$Presentadora.play('Habla')
+		$tecla.play('Down')
+	elif index == 8:
+		$Presentadora.play('Habla')
 		$tecla.play('Right')
 	else:
 		$tecla.play('empty')

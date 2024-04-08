@@ -1,6 +1,6 @@
 extends CharacterBody2D
 #Creacion de las variables y asignación de valores. 
-var speed = 500
+var speed = 600
 var current_dir = "none"
 #var fredPos  #Posiblemente se puede eliminar (Revisar)
 
@@ -87,4 +87,4 @@ func _on_enemies_area_shape_entered(area_rid, area, area_shape_index, local_shap
 
 
 func _on_foods_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
-	Globals.vida +=1
+	speed += 50

@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cx7pu6ryhn35m"]
+[gd_scene load_steps=59 format=3 uid="uid://cx7pu6ryhn35m"]
 
 [ext_resource type="PackedScene" uid="uid://cidjs7jjsnvsc" path="res://seasparallax.tscn" id="1_j2jjy"]
 [ext_resource type="PackedScene" uid="uid://cgogiqcwubuf5" path="res://deep_map.tscn" id="2_whsmd"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://c0pixu5v26f78" path="res://Recursos/Extras/JellyFish2.png" id="14_xn2tk"]
 [ext_resource type="PackedScene" uid="uid://b351nmqt5v5ej" path="res://enemy_fish.tscn" id="15_4i0b6"]
 [ext_resource type="PackedScene" uid="uid://brnj8m0jvomdb" path="res://Enemy_Trash.tscn" id="16_wcxxd"]
+[ext_resource type="Texture2D" uid="uid://b0reymme8usta" path="res://Recursos/Enemigos/crab2.png" id="17_v1swd"]
+[ext_resource type="Texture2D" uid="uid://cq8lb5byqk8tm" path="res://Recursos/Enemigos/crab.png" id="18_nqfpi"]
 
 [sub_resource type="Animation" id="Animation_gjbni"]
 resource_name = "Aparece"
@@ -401,6 +403,28 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdbiy"]
+atlas = ExtResource("17_v1swd")
+region = Rect2(0, 0, 571, 325)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtiou"]
+atlas = ExtResource("18_nqfpi")
+region = Rect2(0, 0, 571, 322)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k8l5h"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_mdbiy")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_gtiou")
+}],
+"loop": true,
+"name": &"dance",
+"speed": 4.0
+}]
+
 [node name="Intro2" type="Node2D"]
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("1_j2jjy")]
@@ -446,7 +470,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 146.0
 offset_top = 171.0
-offset_right = -320.0
+offset_right = -343.0
 offset_bottom = -389.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -497,19 +521,25 @@ frame_progress = 0.672996
 
 [node name="JellyFish" type="AnimatedSprite2D" parent="CanvasLayer"]
 visible = false
-position = Vector2(419, 556)
-scale = Vector2(0.414063, 0.414063)
+position = Vector2(554, 538)
+scale = Vector2(0.93164, 0.978515)
 sprite_frames = SubResource("SpriteFrames_4qmt8")
 animation = &"JellySwiming"
 
 [node name="EnemyFish" parent="CanvasLayer" instance=ExtResource("15_4i0b6")]
 visible = false
-position = Vector2(557, 524)
+position = Vector2(631, 487)
 scale = Vector2(0.414063, 0.414063)
 
 [node name="Trash" parent="CanvasLayer" instance=ExtResource("16_wcxxd")]
 visible = false
-position = Vector2(746, 532)
+position = Vector2(855, 525)
+
+[node name="crab" type="AnimatedSprite2D" parent="CanvasLayer"]
+position = Vector2(1103, 481)
+scale = Vector2(0.219957, 0.219957)
+sprite_frames = SubResource("SpriteFrames_k8l5h")
+animation = &"dance"
 
 [node name="Button2" type="Button" parent="CanvasLayer"]
 anchors_preset = 15

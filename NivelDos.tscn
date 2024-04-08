@@ -1,17 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://bjppk23brpdh4"]
+[gd_scene load_steps=9 format=3 uid="uid://dq44v3u68ybb7"]
 
 [ext_resource type="PackedScene" uid="uid://cgogiqcwubuf5" path="res://deep_map.tscn" id="1_4pbj8"]
 [ext_resource type="PackedScene" uid="uid://cidjs7jjsnvsc" path="res://seasparallax.tscn" id="3_bknuc"]
 [ext_resource type="PackedScene" uid="uid://k6p6xk45ktsa" path="res://fred_swimer.tscn" id="3_yoh4c"]
 [ext_resource type="PackedScene" uid="uid://b351nmqt5v5ej" path="res://enemy_fish.tscn" id="4_bvnh1"]
 [ext_resource type="PackedScene" uid="uid://brnj8m0jvomdb" path="res://Enemy_Trash.tscn" id="5_x1rdw"]
-[ext_resource type="PackedScene" uid="uid://yrbru0ccg3va" path="res://algae.tscn" id="6_v8hky"]
 [ext_resource type="PackedScene" uid="uid://dthioeboy8oni" path="res://Enemy_crab.tscn" id="7_2dn6t"]
 [ext_resource type="PackedScene" uid="uid://ed6r8jcylqgx" path="res://first_meta.tscn" id="8_thu8g"]
 [ext_resource type="PackedScene" uid="uid://nr8g461t6joy" path="res://jelly_fish.tscn" id="9_osgx7"]
 
-[node name="Nivel_Dos" type="Node2D"]
-position = Vector2(16, 0)
+[node name="NivelDos" type="Node2D"]
 
 [node name="sky" parent="." instance=ExtResource("3_bknuc")]
 
@@ -31,19 +29,19 @@ position = Vector2(3328, 434)
 position = Vector2(9896, 323)
 
 [node name="EnemyFish3" parent="." instance=ExtResource("4_bvnh1")]
-position = Vector2(16663, 595)
+position = Vector2(14839, 350)
 
 [node name="EnemyFish10" parent="." instance=ExtResource("4_bvnh1")]
-position = Vector2(18235, 328)
+position = Vector2(16211, 346)
 
 [node name="EnemyFish11" parent="." instance=ExtResource("4_bvnh1")]
-position = Vector2(20180, 540)
+position = Vector2(19643, 365)
 
 [node name="EnemyFish12" parent="." instance=ExtResource("4_bvnh1")]
-position = Vector2(23180, 307)
+position = Vector2(22512, 335)
 
 [node name="EnemyFish4" parent="." instance=ExtResource("4_bvnh1")]
-position = Vector2(26865, 276)
+position = Vector2(25881, 338)
 
 [node name="EnemyFish13" parent="." instance=ExtResource("4_bvnh1")]
 position = Vector2(29124, 525)
@@ -71,9 +69,6 @@ position = Vector2(40828, 276)
 
 [node name="EnemyFish14" parent="." instance=ExtResource("4_bvnh1")]
 position = Vector2(44377, 525)
-
-[node name="algae" parent="." instance=ExtResource("6_v8hky")]
-position = Vector2(-29, 58)
 
 [node name="JellyFish" parent="." instance=ExtResource("9_osgx7")]
 position = Vector2(3120, 440)
@@ -131,7 +126,7 @@ position = Vector2(13048, 655)
 position = Vector2(46112, 640)
 
 [node name="crab6" parent="." instance=ExtResource("7_2dn6t")]
-position = Vector2(41951, 539)
+position = Vector2(41991, 658)
 
 [node name="trash" parent="." instance=ExtResource("5_x1rdw")]
 position = Vector2(4035, 541)
@@ -142,19 +137,27 @@ position = Vector2(11583, 363)
 rotation = 0.484963
 
 [node name="trash3" parent="." instance=ExtResource("5_x1rdw")]
-position = Vector2(18751, 496)
+position = Vector2(15431, 541)
 rotation = 0.484963
 
 [node name="trash4" parent="." instance=ExtResource("5_x1rdw")]
-position = Vector2(19824, 352)
+position = Vector2(18008, 533)
 rotation = 0.484963
 
 [node name="trash5" parent="." instance=ExtResource("5_x1rdw")]
-position = Vector2(24828, 553)
+position = Vector2(20863, 530)
+rotation = 0.484963
+
+[node name="trash6" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(8087, 508)
+rotation = 0.484963
+
+[node name="trash7" parent="." instance=ExtResource("5_x1rdw")]
+position = Vector2(13781, 459)
 rotation = 0.484963
 
 [node name="trash10" parent="." instance=ExtResource("5_x1rdw")]
-position = Vector2(26180, 471.999)
+position = Vector2(24873, 506.001)
 rotation = 0.484963
 
 [node name="trash11" parent="." instance=ExtResource("5_x1rdw")]
@@ -193,14 +196,6 @@ rotation = 0.484963
 position = Vector2(48018, 494)
 rotation = 0.484963
 
-[node name="trash6" parent="." instance=ExtResource("5_x1rdw")]
-position = Vector2(8087, 508)
-rotation = 0.484963
-
-[node name="trash7" parent="." instance=ExtResource("5_x1rdw")]
-position = Vector2(15661, 333.999)
-rotation = 0.484963
-
 [node name="trash8" parent="." instance=ExtResource("5_x1rdw")]
 position = Vector2(5420, 337)
 rotation = 0.484963
@@ -210,4 +205,4 @@ position = Vector2(21823, 320)
 rotation = 0.484963
 
 [node name="Meta" parent="." instance=ExtResource("8_thu8g")]
-position = Vector2(52952, 432)
+position = Vector2(53071, 444)
