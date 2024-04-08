@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var Dead = preload("res://Portada.tscn") as PackedScene #Creación de la escena
+@export var Dead = preload("res://Inicio.tscn") as PackedScene #Creación de la escena
 
 #Creacion de las variables y asignación de valores. 
 var speed = 300

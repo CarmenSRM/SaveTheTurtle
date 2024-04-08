@@ -1,7 +1,7 @@
 extends Area2D
 class_name Enemy #Se especifica a la clase que pertenece. 
 #Más información de clases buscar el video otra vez :I
-@export var Dead = preload("res://Portada.tscn") as PackedScene #Creación de la escena
+@export var Dead = preload("res://Inicio.tscn") as PackedScene #Creación de la escena
 
 var speed = 6 #Velocidad
 var presa = null #Variable para hacer referencia al personaje (Fred)

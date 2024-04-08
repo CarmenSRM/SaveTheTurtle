@@ -1,12 +1,14 @@
 extends CanvasLayer
 
 const Texto : Array = [
-	'¡Hola, bienvenido al juego!',
-	'Yo soy Carmen, y te acompañaré en tu paso por del juego',
-	'Yo sere tu guía y voy a explicarte las dinámicas de los niveles.',
-	'Para ayudarte a entender un poco acerca de la situación que están viviendo las tortugas marinas.',
-	'Las tortugas marinas son uno de los animales en peligro de extinción.',
-	'Esto es debido a una gran cantidad de factores. Algunos de ellos se presentarán a lo largo de este juego.',
+	'¡Hola! Bienvenido al juego. Yo seré tu guía y te acompañaré durante tu recorrido por el juego.', 
+	'Voy a explicarte las dinámicas de los niveles y proporcionarte datos interesantes sobre el tema.',
+	'Comenzaré diciendo que este juego tiene como objetivo ayudarte a entender un poco más acerca de la situación que están viviendo las tortugas marinas.',
+	'Las tortugas marinas desempeñan un papel muy importante en los ecosistemas marinos y terrestres. Ellas ayudan a “sanificar” los arrecifes de coral, las praderas marinas y las cadenas tróficas.',
+	'En tierra, contribuyen a dispersar semillas, controlar plagas y reciclar nutrientes. Gracias a ellas, las playas y costas logran ser tan bellas y habitables para humanos y animales.',
+	'La conservación de las tortugas marinas es vital para la biodiversidad.',
+	'Estos increíbles animales se encuentran en peligro de extinción debido a una gran cantidad de factores, como la contaminación, el comercio ilegal, el hurto de huevos, la caza incidental e ilegal, y el turismo inconsciente, entre otros.',
+	'A lo largo de este juego, se presentarán algunos de estos desafíos.',
 	'¡Vamos, comencemos!'
 ]
 
@@ -40,6 +42,7 @@ func _on_button_pressed():
 		$Label.hide()
 		$CuadroDialogo.hide()
 		$Button.hide()
+		$Button3.hide()
 		$Presentadora.hide()
 		$Button2.show()
 
